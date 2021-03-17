@@ -17,4 +17,4 @@ dls = DataBlock(
 timm_model = timm.create_model(model_name='tf_efficientnet_b4_ns',num_classes=10)
 learn = Learner(dls,timm_model, metrics=[accuracy,top_k_accuracy]).to_fp16()
 with learn.distrib_ctx(): 
-    learn.fit_flat_cos(2, 1e-3, cbs=MixUp(0.1))
+    learn.fit_flat_cos(1, 1e-3, cbs=MixUp(0.1))
