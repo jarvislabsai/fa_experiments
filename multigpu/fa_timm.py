@@ -3,7 +3,7 @@ from fastai.distributed import *
 from fastai.vision.models.xresnet import *
 import timm
 
-path = '.fastai/data/imagewoof2-320/'
+path = '../data/imagewoof2-320/'
 
 
 dls = DataBlock(
